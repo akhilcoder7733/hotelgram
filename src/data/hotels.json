@@ -1,0 +1,112 @@
+[
+  {
+    "id": "htl_001",
+    "name": "Azure Bay Resort",
+    "city": "Goa",
+    "category": "Resort",
+    "pricePerNight": 6800,
+    "rating": 4.7,
+    "reviews": 1248,
+    "featured": true,
+    "images": [
+    "/assets/hotels/azure/cover.jpg",
+    "/assets/hotels/azure/room1.jpg",
+    "/assets/hotels/azure/room2.jpg"
+  ],
+    "amenities": [
+      "Free WiFi",
+      "Beach Access",
+      "Swimming Pool",
+      "Spa",
+      "Breakfast Included"
+    ],
+    "description": "A luxury beachfront resort offering stunning ocean views and world-class hospitality.",
+    "availability": true
+  },
+  {
+    "id": "htl_002",
+    "name": "Urban Nest Suites",
+    "city": "Bangalore",
+    "category": "Business",
+    "pricePerNight": 4200,
+    "rating": 4.3,
+    "reviews": 842,
+    "featured": false,
+    "images": [
+      "/assets/hotels/budget-inn/burger1.jpg",
+      "/assets/hotels/budget-inn/burger2.jpg"
+    ],
+    "amenities": [
+      "Free WiFi",
+      "Work Desk",
+      "Gym",
+      "Airport Shuttle"
+    ],
+    "description": "Modern business hotel located in the heart of the city with premium workspaces.",
+    "availability": true
+  },
+  {
+    "id": "htl_003",
+    "name": "Palm Retreat",
+    "city": "Kochi",
+    "category": "Luxury",
+    "pricePerNight": 9500,
+    "rating": 4.9,
+    "reviews": 531,
+    "featured": true,
+    "images": [
+      "/assets/hotels/palm-retreat/cover1.jpg",
+      "/assets/hotels/palm-retreat/cover2.jpg"
+    ],
+    "amenities": [
+      "Infinity Pool",
+      "Spa",
+      "Fine Dining",
+      "Private Balcony"
+    ],
+    "description": "An ultra-luxury retreat blending modern comfort with traditional elegance.",
+    "availability": true
+  },
+  {
+    "id": "htl_004",
+    "name": "Budget Stay Inn",
+    "city": "Chennai",
+    "category": "Budget",
+    "pricePerNight": 1800,
+    "rating": 3.9,
+    "reviews": 2134,
+    "featured": false,
+    "images": [
+      "/assets/hotels/urban-nest/cover1.jpg"
+    ],
+    "amenities": [
+      "Free WiFi",
+      "AC Rooms",
+      "24x7 Reception"
+    ],
+    "description": "Affordable and comfortable stay ideal for short trips and solo travelers.",
+    "availability": true
+  },
+  {
+    "id": "htl_005",
+    "name": "Hillview Escape",
+    "city": "Munnar",
+    "category": "Resort",
+    "pricePerNight": 5600,
+    "rating": 4.5,
+    "reviews": 689,
+    "featured": false,
+    "images": [
+      "/assets/hotels/hillview/hillview-1.jpg",
+      "/assets/hotels/hillview/hillview-2.jpg"
+    ],
+    "amenities": [
+      "Mountain View",
+      "Bonfire",
+      "Guided Treks",
+      "Restaurant"
+    ],
+    "description": "Peaceful hillside resort surrounded by lush greenery and scenic views.",
+    "availability": false
+  }
+]

@@ -1,17 +1,33 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
+import { ThemeModeProvider } from "./theme/ThemeContext";
+import { AuthProvider } from "./contexts/AuthContext";
+import { BookingProvider } from "./contexts/BookingContext";
+import { PaymentProvider } from "./contexts/PaymentContext";
+import { ConfirmProvider } from "./contexts/ConfirmContext";
+import { BookingConfirmProvider } from "./contexts/BookingConfirmContext";
+import App from "./app/App";
+import "@fontsource/inter";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
 root.render(
   <React.StrictMode>
-    <App />
+    <ThemeModeProvider>
+      <AuthProvider>
+        <BookingProvider>
+          <PaymentProvider>
+            <ConfirmProvider>
+<BookingConfirmProvider>
+              <BrowserRouter>
+                <App />
+              </BrowserRouter>
+            </BookingConfirmProvider>
+            </ConfirmProvider>
+          </PaymentProvider>
+        </BookingProvider>
+      </AuthProvider>
+    </ThemeModeProvider>
   </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

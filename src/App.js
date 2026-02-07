@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import { Button, Container, Typography, Paper } from "@mui/material";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container sx={{ py: 6 }}>
+      <Paper sx={{ p: 4 }}>
+        <Typography variant="h4" gutterBottom>
+          Hotelgram.com
+        </Typography>
+        <Typography color="text.secondary" gutterBottom>
+          Premium hotel booking experience
+        </Typography>
+        <Button variant="contained" color="primary">
+          Explore Hotels
+        </Button>
+      </Paper>
+    </Container>
   );
 }
 
