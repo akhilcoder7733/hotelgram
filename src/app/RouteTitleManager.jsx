@@ -5,12 +5,25 @@ import { useBooking } from "../contexts/BookingContext";
 const APP_NAME = "Hotelgram";
 
 const routesWithTitles = [
-  { path: "/", title: "Hotelgram" },
+  { path: "/", title: "Welcome" },
+
+  // Public
   { path: "/home", title: "Home" },
   { path: "/login", title: "Login" },
+  { path: "/services", title: "Services" },
+
+  // Booking flow
   { path: "/booking", title: "Book Hotels" },
   { path: "/booking/:id", title: "Hotel Details" },
+  { path: "/booking/proceed", title: "Booking Summary" },
+  { path: "/booking/payment", title: "Payment" },
+  { path: "/booking/confirmation", title: "Booking Confirmed" },
+
+  // Protected
   { path: "/profile", title: "Profile" },
+
+  // Fallback
+  { path: "*", title: "Page Not Found" },
 ];
 
 const RouteTitleManager = () => {
@@ -23,22 +36,25 @@ const RouteTitleManager = () => {
 
     let title = APP_NAME;
 
-    // 🧠 Dynamic booking title
+    /* ---------------- Dynamic Hotel Title ---------------- */
     if (match?.path === "/booking/:id") {
       const id = location.pathname.split("/").pop();
-      const hotel = getHotelById(id);
+      const hotel = getHotelById?.(id);
 
       title = hotel
         ? `${APP_NAME} | ${hotel.name}`
         : `${APP_NAME} | Hotel Details`;
-    } else if (match?.title) {
+    }
+
+    /* ---------------- Static Titles ---------------- */
+    else if (match?.title) {
       title = `${APP_NAME} | ${match.title}`;
     }
 
-    // ✨ Sync with transitions
+    /* ---------------- Sync with Page Transitions ---------------- */
     const timeout = setTimeout(() => {
       document.title = title;
-    }, 150); // tweak to match your animation timing
+    }, 150); // aligns nicely with AnimatePresence exit
 
     return () => clearTimeout(timeout);
   }, [location, getHotelById]);
